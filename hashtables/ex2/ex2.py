@@ -6,9 +6,29 @@ class Ticket:
 
 
 def reconstruct_trip(tickets, length):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    
+    cache = {}
+    route = [None] * length
+
+    for i in range(length):
+        source = tickets[i].source
+        destination = tickets[i].destination
+        # if this pair isn't stored
+        if source is not None:
+            if source not in cache:
+                # store it
+                cache[source] = destination
+        else:
+            route.append(source)
+            route.append(destination)
+            while destination in cache:
+                route.append(cache[destination])
+                destination = cache[destination]
+            if destination is not None:
+                if source not in cache:
+                    # store it
+                    cache[source] = destination
+            else:
+                route.append(source)
 
     return route
