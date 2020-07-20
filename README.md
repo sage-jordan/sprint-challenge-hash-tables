@@ -23,11 +23,17 @@ Commit your code regularly and meaningfully. This practice helps both you (in ca
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your answers beforehand.
 
 1. Hashing functions
+Take in a number, output a hashed number. They will output the same response every time, with the same input. A good hash can't be undone.
 2. Collision resolution
+When hashing strings, sometimes the output is the same. This can be solved many ways, including linked-lists, and arrays makinga matrix.
 3. Performance of basic hash table operations
+Hash table operations are O(1), and load factor can hinder speed
 4. Load factor
+Number of stored key value pairs divided by number of 'buckets'
 5. Automatic resizing
+When adding or deleting (functions that change the # of kvp) you check the current load factor, and depending on the output, may resize the # of 'buckets'
 6. Various use cases for hash tables
+Making things quicker! Cache/counter/etc
 
 We expect you to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -35,12 +41,12 @@ We expect you to be able to answer questions in these areas. Your responses cont
 
 ### Task 1: Project Set-Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as a collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: git push origin `<firstName-lastName>`
+- [x] Create a forked copy of this project
+- [x] Add your team lead as a collaborator on Github
+- [x] Clone your OWN version of the repository (Not Lambda's by mistake!)
+- [x] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [x] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+- [x] Push commits: git push origin `<firstName-lastName>`
 
 ### Task 2: Project Requirements
 
